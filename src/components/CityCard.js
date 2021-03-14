@@ -75,7 +75,7 @@ export const CityCard = ({id}) => {
     }
 
     return (
-        <div className="h-48 w-full 2xl:w-1/5 md:w-5/12 bg-gray-800 shadow-2xl rounded-lg flex align-items m-0 mt-4 mb-4 lg:m-4 md:m-0 p-6">
+        <div className="h-48 w-full 2xl:w-1/5 md:w-5/12 bg-gray-800 shadow-2xl rounded-lg flex align-items m-0 mt-4 mb-4 lg:m-4 md:m-4 p-6">
             {loading ?
                 <h1>Loading...</h1> :
                 <>
