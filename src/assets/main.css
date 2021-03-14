@@ -55,13 +55,13 @@ Improve consistency of default fonts in all browsers. (https://github.com/sindre
 
 body {
   font-family:
-  'Segoe UI',
+		system-ui,
+		-apple-system, /* Firefox supports this but not yet `system-ui` */
+		'Segoe UI',
 		Roboto,
 		Helvetica,
 		Arial,
 		sans-serif,
-		system-ui,
-		-apple-system, /* Firefox supports this but not yet `system-ui` */
 		'Apple Color Emoji',
 		'Segoe UI Emoji';
 }
@@ -29133,6 +29133,11 @@ video {
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+body{
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {
