@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import propTypes from 'prop-types';
 import {ReactComponent as SearchImg} from '../img/search.svg';
-
-export const AddCity = ({setSelections, cities}) => {
+import listCities from "../assets/cities.json"
+export const AddCity = ({setSelections}) => {
 
 
     const [inputValue, setInputValue] = useState('');
@@ -10,6 +10,8 @@ export const AddCity = ({setSelections, cities}) => {
             setInputValue(e.target.value);
     };
 
+    const cities = listCities.map(city => city)
+    console.log(cities);
     const handleSubmit=(e)=>{
         e.preventDefault()
         const city = cities.find(city => city.city.toUpperCase() === inputValue.toUpperCase() )
